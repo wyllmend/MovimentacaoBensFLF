@@ -1,0 +1,54 @@
+﻿@page
+@model MovimentacaoBensFLF.Pages.Chat.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ChatMensagem[0].Solicitacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChatMensagem[0].UsuarioId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChatMensagem[0].Mensagem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChatMensagem[0].DataHora)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.ChatMensagem) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Solicitacao.Destino)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsuarioId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mensagem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataHora)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

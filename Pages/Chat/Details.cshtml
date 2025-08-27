@@ -1,0 +1,43 @@
+﻿@page
+@model MovimentacaoBensFLF.Pages.Chat.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ChatMensagem</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ChatMensagem.Solicitacao)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ChatMensagem.Solicitacao.Destino)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ChatMensagem.UsuarioId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ChatMensagem.UsuarioId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ChatMensagem.Mensagem)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ChatMensagem.Mensagem)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ChatMensagem.DataHora)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ChatMensagem.DataHora)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.ChatMensagem.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

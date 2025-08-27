@@ -1,0 +1,53 @@
+/* ------------------------------
+   Área Home
+---------------------------------*/
+.home-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.logo-area h1 {
+    margin-bottom: 20px;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+    .btn-action .icon {
+        margin-right: 8px;
+        font-size: 18px;
+    }
+
+.notificacao {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* ------------------------------
+   Notificações
+---------------------------------*/
+.notificacao {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* ------------------------------
+   Ajustes Visuais Extras
+---------------------------------*/
+/* Você pode adicionar regras extras aqui se precisar customizar
+   mais o visual no futuro */

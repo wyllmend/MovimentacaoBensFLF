@@ -1,0 +1,37 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="container py-5">
+
+    <!-- Aviso de pendências -->
+    <div class="alert alert-info d-flex align-items-center" role="alert">
+        <i class="bi bi-info-circle me-2"></i>
+        Você tem <strong>2 solicitações pendentes</strong>.
+    </div>
+
+    <!-- Ações rápidas -->
+    <div class="row g-4 text-center">
+        <div class="col-md-4">
+            <a href="/Movimentacoes/Create" class="card shadow-sm p-4 text-decoration-none text-dark">
+                <i class="bi bi-plus-circle-fill text-primary" style="font-size: 2.5rem;"></i>
+                <h5 class="mt-3">Nova Solicitação</h5>
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="/Solicitante/Movimentacao" class="card shadow-sm p-4 text-decoration-none text-dark">
+                <i class="bi bi-clock-fill text-warning" style="font-size: 2.5rem;"></i>
+                <h5 class="mt-3">Pendentes</h5>
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="/Solicitante/Historico" class="card shadow-sm p-4 text-decoration-none text-dark">
+                <i class="bi bi-list-check text-success" style="font-size: 2.5rem;"></i>
+                <h5 class="mt-3">Histórico</h5>
+            </a>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,84 @@
+﻿@page
+@model MovimentacaoBensFLF.Pages.Solicitacoes.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Solicitacao</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Solicitacao.Id" />
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="Solicitacao.BemId" class="control-label"></label>
+                <select asp-for="Solicitacao.BemId" class="form-control" asp-items="ViewBag.BemId"></select>
+                <span asp-validation-for="Solicitacao.BemId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="Solicitacao.Tipo" class="control-label"></label>
+                <input asp-for="Solicitacao.Tipo" class="form-control" />
+                <span asp-validation-for="Solicitacao.Tipo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="Solicitacao.Origem" class="control-label"></label>
+                <input asp-for="Solicitacao.Origem" class="form-control" />
+                <span asp-validation-for="Solicitacao.Origem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="Solicitacao.Destino" class="control-label"></label>
+                <input asp-for="Solicitacao.Destino" class="form-control" />
+                <span asp-validation-for="Solicitacao.Destino" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <label asp-for="Solicitacao.Justificativa" class="control-label"></label>
+                <input asp-for="Solicitacao.Justificativa" class="form-control" />
+                <span asp-validation-for="Solicitacao.Justificativa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="Solicitacao.UsuarioId" class="control-label"></label>
+                <input asp-for="Solicitacao.UsuarioId" class="form-control" />
+                <span asp-validation-for="Solicitacao.UsuarioId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <label asp-for="Solicitacao.DataSolicitacao" class="control-label"></label>
+                <input asp-for="Solicitacao.DataSolicitacao" class="form-control" />
+                <span asp-validation-for="Solicitacao.DataSolicitacao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="Solicitacao.Status" class="control-label"></label>
+                <input asp-for="Solicitacao.Status" class="form-control" />
+                <span asp-validation-for="Solicitacao.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <label asp-for="Solicitacao.MotivoRejeicao" class="control-label"></label>
+                <input asp-for="Solicitacao.MotivoRejeicao" class="form-control" />
+                <span asp-validation-for="Solicitacao.MotivoRejeicao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

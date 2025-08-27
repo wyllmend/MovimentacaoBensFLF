@@ -1,0 +1,84 @@
+﻿@page
+@model MovimentacaoBensFLF.Pages.Solicitacoes.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Solicitacao[0].Bem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Solicitacao[0].Tipo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Solicitacao[0].Origem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Solicitacao[0].Destino)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Solicitacao[0].Justificativa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Solicitacao[0].UsuarioId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Solicitacao[0].DataSolicitacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Solicitacao[0].Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Solicitacao[0].MotivoRejeicao)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Solicitacao) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bem.LocalizacaoAtual)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tipo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Origem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Destino)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Justificativa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsuarioId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataSolicitacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MotivoRejeicao)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
